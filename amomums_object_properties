@@ -1,0 +1,5 @@
+ var mi = typeof (TestObject)
+            .GetProperties()
+            .Where(pi => pi.Name != "Col1")
+            .Select(pi => (MemberInfo)pi)
+            .ToArray();
